@@ -2,7 +2,7 @@
 
 O API foi desenvolvido para retornar apenas requisições GET no script index.php
 Ex: ```http://localhost/index.php```
-Toda chamada irá recalcular a pontuação de assertividade e prioridade, e guardará no arquivo tickets.json.
+Toda chamada irá recalcular a pontuação de assertividade e prioridade, e guardará no arquivo tickets.json (se a constante "SAVE_JSON_FILE" estiver habilitada, no arquivo constants.php).
 
 # Parâmetros para chamada de API:
 ### order_by
@@ -46,8 +46,8 @@ Toda chamada irá recalcular a pontuação de assertividade e prioridade, e guar
 - Deve ser informado um numero natural maior que 0.
 
 # Exemplo de chamadas de API
-### Filtrar por prioridade, ordenada por data de criação, 2º página:
-```http://localhost/index.php?priority=high&order_by=datecreate&page=2```
+### Filtrar por prioridade, ordenada por data de criação decrescente, 2º página:
+```http://localhost/index.php?priority=high&order_by=datecreate&sort_by=desc&page=2```
 
 # Tecnologias utilizadas
 - PHP 5.6.36
